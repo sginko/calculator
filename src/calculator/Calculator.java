@@ -9,14 +9,13 @@ import java.util.Scanner;
 // Method run should contain only while loop with invoking another private methods
 public class Calculator {
 
+    private static int firstNumber;
+    private static int secondNumber;
+    private static int result;
+    private static String exit = "no";
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
-        int firstNumber;
-        int secondNumber;
-        int result;
-        String exit = "no";
-
         do {
             try {
                 System.out.print("Enter first number: ");
@@ -33,21 +32,14 @@ public class Calculator {
             System.out.print("Enter action: ");
             try {
                 switch (scan.next().charAt(0)) {
-                    case '+':
-                        result = firstNumber + secondNumber;
-                        break;
-                    case '-':
-                        result = firstNumber - secondNumber;
-                        break;
-                    case '*':
-                        result = firstNumber * secondNumber;
-                        break;
-                    case '/':
-                        result = firstNumber / secondNumber;
-                        break;
-                    default:
+                    case '+' -> result = firstNumber + secondNumber;
+                    case '-' -> result = firstNumber - secondNumber;
+                    case '*' -> result = firstNumber * secondNumber;
+                    case '/' -> result = firstNumber / secondNumber;
+                    default -> {
                         System.err.println("You input invalid action");
                         return;
+                    }
                 }
                 System.out.println("Result: " + result);
                 System.out.print("Do you want continue? no / yes: ");
