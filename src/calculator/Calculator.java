@@ -63,7 +63,7 @@ public class Calculator {
         } catch (ArithmeticException e) {
             System.err.print("Division by zero");
         }
-        System.out.print("Do you want continue? No press N / Yes press Y : ");
+        System.out.print("Do you want continue? No, press any key / Yes, press Y : ");
         exit = scan.next();
     }
 }
