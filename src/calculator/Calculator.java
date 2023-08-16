@@ -19,7 +19,7 @@ public class Calculator {
     public void run() {
         System.out.println("-----------------------------");
         System.out.println("Console calculator");
-        System.out.println("You can take nu");
+        System.out.println("Action symbol is: * / + - ");
         System.out.println("-----------------------------");
 
         do {
